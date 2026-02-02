@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Register a user for the first time</description>
+   <name>1_register_user</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>69ccc2c3-7ae6-46d1-937d-272c69a06cd2</testCaseGuid>
+</TestCaseEntity>
