@@ -31,7 +31,7 @@ GlobalVariable.username = "user_" + System.currentTimeMillis() //melakukan gener
 WebUI.setText(findTestObject('locator_register/name'), GlobalVariable.username)
 println("Generated username : " + GlobalVariable.username)
 
-GlobalVariable.email = "practice_" + System.currentTimeMillis() + "@mailinator.com"  //melakukan generate random dan di simpan kedalam global variable
+GlobalVariable.email = "practice_" + System.currentTimeMillis() + "@mail.com"  //melakukan generate random dan di simpan kedalam global variable
 //String email = "test_" + System.currentTimeMillis() + "@mailinator.com"
 WebUI.setText(findTestObject('locator_register/email'), GlobalVariable.email)
 println("Generated email : " + GlobalVariable.email)
@@ -56,20 +56,37 @@ println("Generated password : " + GlobalVariable.password)
 //WebUI.click(findTestObject('Object Repository/locator_register/years_2004'))
 
 //Generate random first name
-def firstnames = ["zio", "fahri", "adam",  "rizky", "alex", "kurniawan", "agus"]  // menampilkan list array nama nama
-def randomfirstname = new Random()
-String firstname = firstnames[randomfirstname.nextInt(firstnames.size())]
-GlobalVariable.firstname = firstname // menyimpan nama pertama ke global variable
+def firstnames = ["zio", "fahri", "adam",  "rizky", "alex", "kurniawan", "agus"]  // menampilkan list array first name
+def randomfirstname = new Random() // function acak untuk mengambil value
+String firstname = firstnames[randomfirstname.nextInt(firstnames.size())] // proses pengacakan
+GlobalVariable.firstname = firstname // menyimpan value ke global variable
 println ("nama pertama : " + firstname)
 WebUI.setText(findTestObject("Object Repository/locator_register/firstName"), firstname)
 
 //Generate random last name
-def lastnames = ["kunyuk", "tiputipu", "gokil",  "insinyur", "bhizer", "alamak", "walawe"] // menampilkan list array nama nama
-def randomlastname = new Random()
-String lastname = lastnames[randomlastname.nextInt(lastnames.size())]
-GlobalVariable.lastname = lastname // menyimpan nama terakhir ke global variable
+def lastnames = ["kunyuk", "tiputipu", "gokil",  "insinyur", "bhizer", "alamak", "walawe"] // menampilkan list array last name
+def randomlastname = new Random() // function acak untuk mengambil value
+String lastname = lastnames[randomlastname.nextInt(lastnames.size())] // proses pengacakan
+GlobalVariable.lastname = lastname // menyimpan value ke global variable
 println ("nama terakhir : " + lastname)
 WebUI.setText(findTestObject("Object Repository/locator_register/lastaName"), lastname)
 
-//WebUI.closeBrowser()
+//Generate random company
+def companys = ["arkadia company", "tirta company", "walk company",  "indiana oil company"] // menampilkan list array nama nama perusahaan
+def comp = new Random() // function acak untuk mengambil value
+String company = companys[comp.nextInt(companys.size())] // proses pengacakan
+GlobalVariable.company = company // menyimpan value ke global variable
+println ("nama perusahaan : " + company)
+WebUI.setText(findTestObject("Object Repository/locator_register/company"), company)
+
+//Generate random addres 1
+def address1 = ["jalan nangroe", "jalan buah", "jalan asam",  "jalan arahan"] // menampilkan list array nama nama address 1
+def add = new Random() // function acak untuk mengambil value
+String alamat1 = address1[add.nextInt(address1.size())] // proses pengacakan
+GlobalVariable.address1 = alamat1 // menyimpan value ke global variable
+println ("tinggal di : " + alamat1)
+WebUI.setText(findTestObject("Object Repository/locator_register/address1"), alamat1)
+
+WebUI.delay(5)
+WebUI.closeBrowser()
 
