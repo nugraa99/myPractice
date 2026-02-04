@@ -116,6 +116,6 @@ GlobalVariable.city = kota // menyimpan value ke global variable
 println ("tinggal di kota : " + kota)
 WebUI.setText(findTestObject("Object Repository/locator_register/city"), kota)
 
-WebUI.delay(5)
+WebUI.delay(4)
 WebUI.closeBrowser()
 
