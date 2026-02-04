@@ -87,6 +87,35 @@ GlobalVariable.address1 = alamat1 // menyimpan value ke global variable
 println ("tinggal di : " + alamat1)
 WebUI.setText(findTestObject("Object Repository/locator_register/address1"), alamat1)
 
+//Generate random addres 2
+def address2 = ["BLOK A, NO.18", "BLOK XII, NO.41", "BLOK 20, NO.1",  "BLOK NANGKA, NO.32"] // menampilkan list array nama nama address 2
+def add2 = new Random() // function acak untuk mengambil value
+String alamat2 = address2[add2.nextInt(address2.size())] // proses pengacakan
+GlobalVariable.address2 = alamat2 // menyimpan value ke global variable
+println ("tinggal di : " + alamat2)
+WebUI.setText(findTestObject("Object Repository/locator_register/address2"), alamat2)
+
+WebUI.click(findTestObject("Object Repository/locator_register/country"))
+WebUI.click(findTestObject("Object Repository/locator_register/new zealand"))
+WebUI.click(findTestObject("Object Repository/locator_register/country"))
+WebUI.verifyElementVisible(findTestObject("Object Repository/locator_register/state"), FailureHandling.STOP_ON_FAILURE)
+
+//Generate random state
+def stats = ["INDONESIA", "MALAYSIA", "BRUNEI", "SINGAPORE", "JAPAN"] // menampilkan list array nama nama address 2
+def stt = new Random() // function acak untuk mengambil value
+String negara = stats[stt.nextInt(stats.size())] // proses pengacakan
+GlobalVariable.state = negara // menyimpan value ke global variable
+println ("tinggal di negara : " + negara)
+WebUI.setText(findTestObject("Object Repository/locator_register/state"), negara)
+
+//Generate random city
+def city = ["JAKARTA", "BOGOR", "BEKASI", "TANGGERANG", "DEPOK"] // menampilkan list array nama nama address 2
+def citys = new Random() // function acak untuk mengambil value
+String kota = city[citys.nextInt(city.size())] // proses pengacakan
+GlobalVariable.city = kota // menyimpan value ke global variable
+println ("tinggal di kota : " + kota)
+WebUI.setText(findTestObject("Object Repository/locator_register/city"), kota)
+
 WebUI.delay(5)
 WebUI.closeBrowser()
 
