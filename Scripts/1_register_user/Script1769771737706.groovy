@@ -48,12 +48,12 @@ WebUI.setText(findTestObject('Object Repository/locator_register/password'), Glo
 println("Generated password : " + GlobalVariable.password)
 
 ////Date of birth
-//WebUI.click(findTestObject('Object Repository/locator_register/birth_day'))
-//WebUI.click(findTestObject('Object Repository/locator_register/date_2'))
-//WebUI.click(findTestObject('Object Repository/locator_register/birth_month'))
-//WebUI.click(findTestObject('Object Repository/locator_register/months_august'))
-//WebUI.click(findTestObject('Object Repository/locator_register/birth_year'))
-//WebUI.click(findTestObject('Object Repository/locator_register/years_2004'))
+WebUI.click(findTestObject('Object Repository/locator_register/birth_day'))
+WebUI.click(findTestObject('Object Repository/locator_register/date_2'))
+WebUI.click(findTestObject('Object Repository/locator_register/birth_month'))
+WebUI.click(findTestObject('Object Repository/locator_register/months_august'))
+WebUI.click(findTestObject('Object Repository/locator_register/birth_year'))
+WebUI.click(findTestObject('Object Repository/locator_register/years_2004'))
 
 //Generate random first name
 def firstnames = ["zio", "fahri", "adam",  "rizky", "alex", "kurniawan", "agus"]  // menampilkan list array first name
@@ -101,7 +101,7 @@ WebUI.click(findTestObject("Object Repository/locator_register/country"))
 WebUI.verifyElementVisible(findTestObject("Object Repository/locator_register/state"), FailureHandling.STOP_ON_FAILURE)
 
 //Generate random state
-def stats = ["INDONESIA", "MALAYSIA", "BRUNEI", "SINGAPORE", "JAPAN"] // menampilkan list array nama nama address 2
+def stats = ["INDONESIA", "MALAYSIA", "BRUNEI", "SINGAPORE", "JAPAN"] // menampilkan list array nama nama state
 def stt = new Random() // function acak untuk mengambil value
 String negara = stats[stt.nextInt(stats.size())] // proses pengacakan
 GlobalVariable.state = negara // menyimpan value ke global variable
@@ -109,13 +109,34 @@ println ("tinggal di negara : " + negara)
 WebUI.setText(findTestObject("Object Repository/locator_register/state"), negara)
 
 //Generate random city
-def city = ["JAKARTA", "BOGOR", "BEKASI", "TANGGERANG", "DEPOK"] // menampilkan list array nama nama address 2
+def city = ["JAKARTA", "BOGOR", "BEKASI", "TANGGERANG", "DEPOK"] // menampilkan list array nama nama city
 def citys = new Random() // function acak untuk mengambil value
 String kota = city[citys.nextInt(city.size())] // proses pengacakan
 GlobalVariable.city = kota // menyimpan value ke global variable
 println ("tinggal di kota : " + kota)
 WebUI.setText(findTestObject("Object Repository/locator_register/city"), kota)
 
-WebUI.delay(4)
+//Generate random zipcode
+def zip = ["11351", "23034", "39102", "41203", "51026"] // menampilkan list array kode pos
+def zipc = new Random() // function acak untuk mengambil value
+String kodepos = zip[zipc.nextInt(zip.size())] // proses pengacakan
+GlobalVariable.zipcode = kodepos // menyimpan value ke global variable
+println ("kode pos : " + kodepos)
+WebUI.setText(findTestObject("Object Repository/locator_register/zipcode"), kodepos)
+
+//Generate random mobile number
+def nohp = ["08710923820", "08519021242", "08391801021", "0891002018", "0851342712"] // menampilkan list array nomor telfon
+def numbphone = new Random() // function acak untuk mengambil value
+String nomortelp = nohp[numbphone.nextInt(nohp.size())] // proses pengacakan
+GlobalVariable.mobile_number = nomortelp // menyimpan value ke global variable
+println ("nomor telfon : " + nomortelp)
+WebUI.setText(findTestObject("Object Repository/locator_register/mobile_number"), nomortelp)
+
+WebUI.click(findTestObject("Object Repository/locator_register/btn_create_account"))
+WebUI.verifyTextPresent("Congratulations! Your new account has been successfully created!", false)
+WebUI.click(findTestObject("Object Repository/locator_register/btn_continue"))
+WebUI.verifyElementPresent(findTestObject("Object Repository/locator_register/verify_homepage"), 5)
+
+WebUI.delay(3)
 WebUI.closeBrowser()
 
