@@ -17,25 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('1_register_user'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://automationexercise.com/')
+WebUI.click(findTestObject('lctr_logout/btn_logout'))
 
-WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Products'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Cart'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Signup  Login'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Test Cases'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_API Testing'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Contact us'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Video Tutorials'))
-
-WebUI.closeBrowser()
+WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_register/sign_up'), FailureHandling.STOP_ON_FAILURE)
 

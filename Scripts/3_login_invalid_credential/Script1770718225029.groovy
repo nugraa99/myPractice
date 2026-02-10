@@ -17,25 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.delay(3)
 
-WebUI.navigateToUrl('https://automationexercise.com/')
+WebUI.callTestCase(findTestCase('2_logout'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)
+WebUI.setText(findTestObject('lctr_login/field_email'), 'invalid_credential@gmail')
 
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Products'))
+WebUI.setText(findTestObject('lctr_login/field_password'), 'invalid12345')
 
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Cart'))
+WebUI.click(findTestObject('lctr_login/btn_login'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Signup  Login'))
+WebUI.verifyElementVisible(findTestObject('lctr_login/txt_invalid_credential'))
 
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Test Cases'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_API Testing'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Contact us'))
-
-WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Video Tutorials'))
-
-WebUI.closeBrowser()
+WebUI.verifyElementText(findTestObject('lctr_login/txt_invalid_credential'), 'Your email or password is incorrect!')
 
