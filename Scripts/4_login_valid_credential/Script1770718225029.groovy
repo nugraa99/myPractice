@@ -19,15 +19,13 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.delay(3)
 
-//WebUI.callTestCase(findTestCase('2_logout'), [:], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('3_login_invalid_credential'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('lctr_login/field_email'), 'invalid_credential@gmail')
+WebUI.setText(findTestObject('lctr_login/field_email'), GlobalVariable.email)
 
-WebUI.setText(findTestObject('lctr_login/field_password'), 'invalid12345')
+WebUI.setText(findTestObject('lctr_login/field_password'), GlobalVariable.password)
 
 WebUI.click(findTestObject('lctr_login/btn_login'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementVisible(findTestObject('lctr_login/txt_invalid_credential'))
-
-WebUI.verifyElementText(findTestObject('lctr_login/txt_invalid_credential'), 'Your email or password is incorrect!')
+WebUI.verifyElementPresent(findTestObject('Object Repository/lctr_register/verify_homepage'), 5)
 

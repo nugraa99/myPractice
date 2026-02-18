@@ -18,9 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
 
-WebUI.openBrowser('')
+//WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://automationexercise.com/')
+//WebUI.navigateToUrl('https://automationexercise.com/')
 
 //WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)'
 WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Signup  Login'))
