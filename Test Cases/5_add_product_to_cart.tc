@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>5_add_product_to_cart</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>04e5c797-4684-4ff4-8135-3c70158140a6</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a0b26541-2071-4741-a4a6-dcb1d5595e0c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>a0b26541-2071-4741-a4a6-dcb1d5595e0c</id>
+      <masked>false</masked>
+      <name>iklan</name>
+   </variable>
+</TestCaseEntity>

@@ -17,10 +17,23 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//WebUI.callTestCase(findTestCase('1_register_user'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(1)
 
-WebUI.click(findTestObject('lctr_logout/btn_logout'))
+WebUI.setText(findTestObject('locator_sauce_demo/username'), GlobalVariable.sauce_demo_username)
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_register/sign_up'), FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(1)
 
+WebUI.setText(findTestObject('locator_sauce_demo/password'), GlobalVariable.sauce_demo_password)
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('locator_sauce_demo/login_btn'))
+
+WebUI.delay(1)
+
+WebUI.verifyElementVisible(findTestObject('locator_sauce_demo/app_logo'))
+
+WebUI.delay(1)
+
+//WebUI.closeBrowser()
 

@@ -6,7 +6,6 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
@@ -23,6 +22,7 @@ import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
 //WebUI.navigateToUrl('https://automationexercise.com/')
 
 //WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)'
+
 WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Signup  Login'))
 
 GlobalVariable.username = ('user_' + System.currentTimeMillis( //melakukan generate random dan di simpan kedalam global variable
@@ -46,8 +46,7 @@ WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_register/h2_en
 
 WebUI.click(findTestObject('Object Repository/lctr_register/title'), FailureHandling.STOP_ON_FAILURE)
 
-GlobalVariable.password = ('pw_' + System.currentTimeMillis( //melakukan generate random dan di simpan kedalam global variable
-    ))
+GlobalVariable.password = ('pw_' + System.currentTimeMillis())//melakukan generate random dan di simpan kedalam global variable
 
 //String email = "test_" + System.currentTimeMillis() + "@mailinator.com"
 WebUI.setText(findTestObject('Object Repository/lctr_register/password'), GlobalVariable.password)
@@ -68,14 +67,12 @@ WebUI.click(findTestObject('Object Repository/lctr_register/birth_year'))
 WebUI.click(findTestObject('Object Repository/lctr_register/years_2004'))
 
 //Generate random first name
-def firstnames = ['zio', 'fahri', 'adam', 'rizky', 'alex', 'kurniawan', 'agus' // menampilkan list array first name
-]
+def firstnames = ['zio', 'fahri', 'adam', 'rizky', 'alex', 'kurniawan', 'agus' ]// menampilkan list array first name
 
 def randomfirstname = new Random( // function acak untuk mengambil value
 )
 
-String firstname = firstnames[randomfirstname.nextInt(firstnames.size()) // proses pengacakan
-]
+String firstname = firstnames[randomfirstname.nextInt(firstnames.size())] // proses pengacakan
 
 GlobalVariable.firstname = firstname // menyimpan value ke global variable
 
@@ -84,11 +81,9 @@ println('nama pertama : ' + firstname)
 WebUI.setText(findTestObject('Object Repository/lctr_register/firstName'), firstname)
 
 //Generate random last name
-def lastnames = ['kunyuk', 'tiputipu', 'gokil', 'insinyur', 'bhizer', 'alamak', 'walawe' // menampilkan list array last name
-]
+def lastnames = ['kunyuk', 'tiputipu', 'gokil', 'insinyur', 'bhizer', 'alamak', 'walawe']// menampilkan list array last name
 
-def randomlastname = new Random( // function acak untuk mengambil value
-)
+def randomlastname = new Random()// function acak untuk mengambil value
 
 String lastname = lastnames[randomlastname.nextInt(lastnames.size()) // proses pengacakan
 ]

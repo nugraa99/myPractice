@@ -17,10 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//WebUI.callTestCase(findTestCase('1_register_user'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('')
 
-WebUI.click(findTestObject('lctr_logout/btn_logout'))
+WebUI.navigateToUrl('https://automationexercise.com/')
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_register/sign_up'), FailureHandling.STOP_ON_FAILURE)
+WebUI.maximizeWindow()
 
+WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Signup  Login'))
+
+WebUI.setText(findTestObject('lctr_login/field_email'), 'mypractice123@gmail.com')
+
+WebUI.setText(findTestObject('lctr_login/field_password'), 'belajar12345')
+
+WebUI.click(findTestObject('lctr_login/btn_login'), FailureHandling.STOP_ON_FAILURE)
+
+iklan = WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/adds'))
+
+//if (iklan == true) {
+//	WebUI.clickOffset(null, 0, 0)
+//}
+
+WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Products'))
+
+WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/verify_logoSpecialOffer'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.scrollToElement(findTestObject('Object Repository/lctr_product/scroll_element'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
 
