@@ -116,18 +116,4 @@
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'standard_user'</initValue>
-      <name>sauce_demo_username</name>
-      <protected>false</protected>
-      <valueType>STRING</valueType>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'secret_sauce'</initValue>
-      <name>sauce_demo_password</name>
-      <protected>false</protected>
-      <valueType>STRING</valueType>
-   </GlobalVariableEntity>
 </GlobalVariableEntities>

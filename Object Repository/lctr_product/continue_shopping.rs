@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>burger_menu</name>
+   <name>continue_shopping</name>
    <tag></tag>
-   <elementGuidId>52e21b9d-9357-4636-896a-cd2b1610e61c</elementGuidId>
+   <elementGuidId>4eb80faa-08ba-43d3-a393-ed33a628fc1c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id = 'react-burger-menu-btn']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value></value>
+         <value>//*[@class = 'btn btn-success close-modal btn-block']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -20,9 +16,9 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>class</name>
       <type>Main</type>
-      <value>react-burger-menu-btn</value>
-      <webElementGuid>a7f53b62-99c1-431b-9b75-f685026a3f46</webElementGuid>
+      <value>btn btn-success close-modal btn-block</value>
+      <webElementGuid>5b7e256f-0ae4-4c6e-9b74-b8d85b4f119a</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

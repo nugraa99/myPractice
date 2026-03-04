@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>login_sauce_demo</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>b06775bd-1d11-4b86-a8b7-50ee105b662e</testCaseGuid>
-</TestCaseEntity>

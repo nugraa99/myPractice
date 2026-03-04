@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>app_logo</name>
+   <name>address_delivery</name>
    <tag></tag>
-   <elementGuidId>4acbef3c-4f29-4239-bbb0-ed68c15feaf9</elementGuidId>
+   <elementGuidId>ce54f62a-1336-408c-9dbc-7dc4653bc4ab</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'app_logo']</value>
+         <value>//*[@id = 'address_delivery']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -16,9 +16,9 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>id</name>
       <type>Main</type>
-      <value>app_logo</value>
-      <webElementGuid>bab8924e-cb9a-4843-91a0-8cb92048187c</webElementGuid>
+      <value>address_delivery</value>
+      <webElementGuid>8ab1600f-f735-4e26-a10d-082ee87d8c80</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

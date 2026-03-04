@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>logout_sidebar_link</name>
+   <name>checkout_process</name>
    <tag></tag>
-   <elementGuidId>18068c43-98d3-4a9f-9161-6ad242dd7f52</elementGuidId>
+   <elementGuidId>97ac6ee1-6c18-43ca-9549-8e886c52cebd</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id = 'logout_sidebar_link']</value>
+         <value>//*[@class = 'btn btn-default check_out']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -16,9 +16,9 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>class</name>
       <type>Main</type>
-      <value>logout_sidebar_link</value>
-      <webElementGuid>7fac504f-6e80-430e-8394-f607e8157b44</webElementGuid>
+      <value>btn btn-default check_out</value>
+      <webElementGuid>988db943-a7d3-479a-9c26-679161a13bd4</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

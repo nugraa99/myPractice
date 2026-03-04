@@ -31,11 +31,11 @@ WebUI.setText(findTestObject('lctr_login/field_password'), 'belajar12345')
 
 WebUI.click(findTestObject('lctr_login/btn_login'), FailureHandling.STOP_ON_FAILURE)
 
-iklan = WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/adds'))
-
+//iklan = WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/adds'))
 //if (iklan == true) {
 //	WebUI.clickOffset(null, 0, 0)
 //}
+WebUI.verifyElementPresent(findTestObject('Object Repository/lctr_register/verify_homepage'), 5)
 
 WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Products'))
 
@@ -43,5 +43,21 @@ WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/verify
 
 WebUI.scrollToElement(findTestObject('Object Repository/lctr_product/scroll_element'), 10, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('lctr_product/add_product1'))
+
+WebUI.verifyElementVisible(findTestObject('lctr_product/continue_shopping'))
+
+WebUI.click(findTestObject('lctr_product/continue_shopping'))
+
+WebUI.scrollToElement(findTestObject('lctr_introduction/a_Cart'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Object Repository/lctr_introduction/a_Cart'))
+
+WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/checkout_process'))
+
+WebUI.click(findTestObject('Object Repository/lctr_product/checkout_process'))
+
+WebUI.verifyElementVisible(findTestObject('Object Repository/lctr_product/address_delivery'))
+
+WebUI.click(findTestObject('lctr_product/order'))
 
